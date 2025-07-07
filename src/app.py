@@ -35,6 +35,13 @@ def create_app(config=None):
             return redirect(url_for('index'))
         return render_template('add.html')
     
+    # Funcion para eliminar una pelicula
+    @app.route('/delete/<int:id>', methods=['POST'])
+    def delete(id):
+        pelicula = Pelicula.query.get_or_404(id)
+        db.session.delete(pelicula)
+        db.session.commit()
+        return redirect(url_for('index'))
 
     return app
 
