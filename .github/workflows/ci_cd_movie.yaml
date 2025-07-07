@@ -37,5 +37,5 @@ jobs:
         context: .
         file: src/Dockerfile
         push: true
-        tags: ghcr.io/claudiomanyajacobo/app-ci-cd-movie:latest
+        tags: ghcr.io/claudiomanyajacobo/app-movie:latest
 
